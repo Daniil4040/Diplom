@@ -1,0 +1,19 @@
+<div class="header">
+    <div class="logo">
+    <div class="logo_text">
+        <h1><a href="#">Онлайн Кино</a></h1> 
+        <h2>Лучшие фильмы здесь</h2>
+    </div>
+    </div>
+    <div class="menubar">
+        <ul class="menu">
+        <li class="selected"><a href="index.html">Главная</a></li>
+        <% categories.each do |category| %>
+            <li><%= link_to category.name, category_path(category) %></li>
+        <% end %>
+        <li><a href="rating.html">Рейтинг фильмов</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+        
+        </ul>
+    </div>
+</div>

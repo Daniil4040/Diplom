@@ -3,6 +3,9 @@
   <head>
     <title>Diplom</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width = divice-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +14,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main">
+      <%= menu_helper %>
+      <div class="site_content">
+        <div class="sidebar_container">
+          <%= render partial: 'shared/search' %>
+          <%= render partial: 'shared/input'  %>
+          <%= render partial: 'shared/news' %>
+          <%= render partial: 'shared/rating' %>
+        </div>
+        <div class="content">
+
+          <%= yield %>
+          
+        </div>
+      </div>
+      <%= render partial: 'shared/footer' %>
+    </div>
   </body>
 </html>
