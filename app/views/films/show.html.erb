@@ -1,0 +1,42 @@
+<h1><%= @film.name %></h1>
+<iframe width="560" height="315" src= <%= @film.trailer_link %> frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="info_film_page">
+    <span class="lable">Рейтинг: </span><span class="value"><%= @film.rating %></span>
+    <span class="lable">Год: </span><span class="value"><%= @film.year %></span>
+    <span class="lable">Режиссёр: </span><span class="value"><%= @film.director %></span>
+</div>
+<hr>
+<h2>Описание фильма "<%= @film.name %>"</h2>
+<div class="descriptions_film">
+    <% if @film.poster.attached? %>
+        <%= image_tag @film.poster %>
+    <% end %>
+    <%= @film.description %>
+</div>
+<hr>
+<h2>Отзывы об фильме "<%= @film.name %>":</h2>
+<div class="reviews">
+    <div class="review_name">
+        Сергей
+    </div>
+    <div class="review_text">
+        Отличный фильм, 3 часа пролетели не заметно.
+    </div>
+</div>
+
+<div class="reviews">
+    <div class="review_name">
+        Дмитрий
+    </div>
+    <div class="review_text">
+        После фильма Начало, я с не терпением ждал еще работ от Киано Ривз. Матрица меня впечатлил.
+    </div>
+</div>
+
+<div class="send">
+    <form method="post" action="#" id="review">
+        <input type="text" name="review_name" placeholder="ваше имя">
+        <textarea name="review_text"></textarea>
+        <input class="btn" type="submit" value="отправить">
+    </form>
+</div>

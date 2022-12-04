@@ -20,15 +20,15 @@ film = Film.create!(
 )
 
 film.poster.attach(
-  io: File.open(Rails.root.join("db", "images", "max.png")),
-  filename: 'max.png',
+  io: File.open(Rails.root.join("db", "images", "matrix.png")),
+  filename: 'matrix.png',
   content_type: 'application/png',
   identify: false
 )
 
 film = Film.create!(
     name: 'Sherlock',
-    trailer_link: 'https://www.youtube.com/watch?v=eMM7sX4-6gc&ab_channel=%D0%9F%D0%BB%D0%B0%D1%82%D0%BE%D0%BD%D0%A9%D1%83%D0%BA%D0%B8%D0%BD',
+    trailer_link: "https://www.youtube.com/embed/eMM7sX4-6gc",
     rating: 8.0,
     year: 2010,
     director: 'Poal',
@@ -37,14 +37,14 @@ film = Film.create!(
 )
 
 film.poster.attach(
-  io: File.open(Rails.root.join("db", "images", "breakingbad.png")),
-  filename: 'breakingbad.png',
+  io: File.open(Rails.root.join("db", "images", "sherlock.png")),
+  filename: 'sherlock.png',
   content_type: 'application/png',
   identify: false
 )
 film = Film.create!(
   name: 'Stars on the ground',
-    trailer_link: 'https://www.youtube.com/watch?v=4RK5HzjSwPs&feature=emb_logo&ab_channel=StandUP',
+    trailer_link: "https://my.mail.ru/video/embed/1985750757479027523",
     rating: 8.1,
     year: 2007,
     director: 'Jack',
@@ -53,15 +53,15 @@ film = Film.create!(
 )
 
 film.poster.attach(
-  io: File.open(Rails.root.join("db", "images", "cloud.png")),
-  filename: 'cloud.png',
+  io: File.open(Rails.root.join("db", "images", "Stars.png")),
+  filename: 'Stars.png',
   content_type: 'application/png',
   identify: false
 )
 
 film = Film.create!(
   name: 'Game of Thrones',
-  trailer_link: 'https://www.youtube.com/watch?v=MheHw-rbMMg&ab_channel=%D0%92%D0%A0%D0%B5%D0%B9%D1%82%D0%B8%D0%BD%D0%B3%D0%B5',
+  trailer_link: "https://kg-portal.ru/t44734",
   rating: 9,
   year: 2011-2019,
   director: 'Robert',
@@ -70,8 +70,8 @@ film = Film.create!(
 )
 
 film.poster.attach(
-  io: File.open(Rails.root.join("db", "images", "matrix.png")),
-  filename: 'matrix.png',
+  io: File.open(Rails.root.join("db", "images", "pristol.png")),
+  filename: 'pristol.png',
   content_type: 'application/png',
   identify: false
 )

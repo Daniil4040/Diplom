@@ -1,0 +1,10 @@
+<% @films.each do |film| %>
+    <div class="info_film">
+        <% if film.poster.attached? %>
+            <%= image_tag film.poster %>
+        <% else %>
+        <% end %>
+        <%= film.description %>
+        <div class="button"><%= link_to "Смотреть", film %></div>
+    </div>
+<% end %>

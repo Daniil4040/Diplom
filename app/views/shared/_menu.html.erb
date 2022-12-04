@@ -7,7 +7,7 @@
     </div>
     <div class="menubar">
         <ul class="menu">
-        <li class="selected"><a href="index.html">Главная</a></li>
+        <li><%= link_to "Главная", root_path %></li>
         <% categories.each do |category| %>
             <li><%= link_to category.name, category_path(category) %></li>
         <% end %>

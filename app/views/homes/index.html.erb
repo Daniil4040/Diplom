@@ -1,0 +1,20 @@
+<h1>Новые фильмы</h1>
+<div class="films_block">
+    <% @films.each do |film| %>
+        <% if film.poster.attached? %>
+            <%= link_to film_path(film) do %>
+                <%= image_tag film.poster %>
+            <% end%>
+        <% end %>
+    <% end %>
+</div>
+<h1>Новые сериалы</h1>
+<div class="films_block">
+    <% @serial.each do |film| %>
+        <% if film.poster.attached? %>
+            <%= link_to film_path(film) do %>
+                <%= image_tag film.poster %>
+            <% end%>
+        <% end %>
+    <% end %>
+</div>

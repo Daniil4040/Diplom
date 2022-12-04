@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <th></th>
+        <th>Фильм</th>
+        <th class="center">Год</th>
+        <th class="center">Рейтинг</th>
+    </tr>
+    <% @films.each do |film| %>
+        <tr>
+            <% if film.poster.attached? %>
+            <td class="center"><%= image_tag film.poster %></td>
+            <% end %>
+            <td>1. <%= link_to film.name, film %></td>
+            <td class="center"><%= film.year %></td>
+            <td class="center rating"><%= film.rating %></td>
+        </tr>
+    <% end %>
+
+</table>
