@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root "homes#index"
   resources :films
   get "/rating/", to: "rating#index"
+  get "/contact/", to: "contact#index"
 end

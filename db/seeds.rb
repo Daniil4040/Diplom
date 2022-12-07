@@ -75,3 +75,38 @@ film.poster.attach(
   content_type: 'application/png',
   identify: false
 )
+
+film = Film.create!(
+  name: 'Charlie and the Chocolate Factory',
+  trailer_link: "https://www.youtube.com/embed/VP3Nv9_FKqA",
+  rating: 7.6,
+  year: 2005,
+  director: "Tim Berton",
+  description: "Какие чудеса ждут вас на фабрике Вилли Вонки? Только представьте: травяные луга из сладкого мятного сахара в Шоколадной Комнате ... Можно проплыть по Шоколадной реке на розовой сахарной лодке ... Или поставить эксперименты в Комнате изобретений с леденцами, которые никогда не тают ",
+  category: category_film
+)
+
+film.poster.attach(
+  io: File.open(Rails.root.join("db", "images", "Charli.jpg")),
+  filename: 'Charli.jpg',
+  content_type: 'application/jpg',
+  identify: false
+)
+
+film = Film.create!(
+  name: 'Jackie Chan Adventures',
+  trailer_link: "https://www.youtube.com/embed/NxYvHFQDC-o",
+  rating: 7.7,
+  year: 2002,
+  director: 'David Hartman',
+  description: 'Джеки Чан путешествует по миру в поисках древностей, многие из которых обнаруживают в себе волшебные свойства. Корме того наш герой виртуозно владеет восточными единоборствами, он - стремителен, неуловим, и борется со злом во всех его проявлениях.',
+  category: category_serial
+)
+
+film.poster.attach(
+  io: File.open(Rails.root.join("db", "images", "Jacki.jpg")),
+  filename: 'Jacki.jpg',
+  content_type: 'application/jpg',
+  identify: false
+)
+

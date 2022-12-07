@@ -11,7 +11,7 @@
         <% categories.each do |category| %>
             <li><%= link_to category.name, category_path(category) %></li>
         <% end %>
-        <li><a href="rating.html">Рейтинг фильмов</a></li>
+        <li><%= link_to "Рейтинг", rating_path %></li>
         <li><a href="contact.html">Контакты</a></li>
         
         </ul>
