@@ -15,28 +15,6 @@
 </div>
 <hr>
 <h2>Отзывы об фильме "<%= @film.name %>":</h2>
-<div class="reviews">
-    <div class="review_name">
-        Сергей
-    </div>
-    <div class="review_text">
-        Отличный фильм, 3 часа пролетели не заметно.
-    </div>
-</div>
 
-<div class="reviews">
-    <div class="review_name">
-        Дмитрий
-    </div>
-    <div class="review_text">
-        После фильма Начало, я с не терпением ждал еще работ от Киано Ривз. Матрица меня впечатлил.
-    </div>
-</div>
-
-<div class="send">
-    <form method="post" action="#" id="review">
-        <input type="text" name="review_name" placeholder="ваше имя">
-        <textarea name="review_text"></textarea>
-        <input class="btn" type="submit" value="отправить">
-    </form>
-</div>
+<%= render 'comments/comments' %>
+<%= render 'comments/form' %>
