@@ -1,8 +1,12 @@
 <div class="sidebar">
     <h2>Рейтинг фильмов</h2>
     <ul>
-        <% films.each do |film| %>
-            <li><a href="show.html"><%= film.name %></a><span class="rating_sidebar"><%= film.rating %></span></li>
+        <% if films.present? %>
+            <% films.each do |film| %>
+                <li><a href="show.html"><%= film.name %></a><span class="rating_sidebar"><%= film.rating %></span></li>
+            <% end %>
+        <% else %>
+                фильмов пока нет
         <% end %>
     </ul>
 </div>

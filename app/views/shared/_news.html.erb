@@ -1,6 +1,10 @@
 <div class="sidebar">
     <h2>Новости</h2>
-    <span><%= event.date_event %></span>
-    <p><%= event.title %></p>
-    <input class="btn" type="submit" value="читать">
+    <% if event.present? %>
+        <span><%= event.date_event %></span>
+        <p><%= event.title %></p>
+        <input class="btn" type="submit" value="читать">
+    <% else %>
+        <p>Новостей нет, но скоро появятся</p>
+    <% end %>
 </div>
