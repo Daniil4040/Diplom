@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   end
   get "/rating/", to: "rating#index"
   get "/contact/", to: "contact#index"
-  get "/news/", to: "news#index"
+  resources :events
   get "/search/", to: "search#index"
 end

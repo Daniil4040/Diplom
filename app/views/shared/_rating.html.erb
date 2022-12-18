@@ -3,7 +3,7 @@
     <ul>
         <% if films.present? %>
             <% films.each do |film| %>
-                <li><a href="show.html"><%= film.name %></a><span class="rating_sidebar"><%= film.rating %></span></li>
+                <li><%= link_to film.name, film %> <span class="rating_sidebar"><%= film.rating %></span></li>
             <% end %>
         <% else %>
                 фильмов пока нет
