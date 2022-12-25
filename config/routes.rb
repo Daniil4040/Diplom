@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     resources :comments 
   end
   get "/rating/", to: "rating#index"
-  get "/contact/", to: "contact#index"
+  resources :contacts
   resources :events
+  resources :news
   get "/search/", to: "search#index"
 end

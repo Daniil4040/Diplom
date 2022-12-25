@@ -1,0 +1,8 @@
+<div class="send send_contact">
+    <%= form_with model: @contact do |c| %>
+        <%= c.text_field :name, placeholder: "ваше имя" %>
+        <%= c.email_field :email, placeholder: "ваш email" %>
+        <%= c.text_area  :comment %>
+        <%= c.submit "Отправить", class: "btn" %>
+    <% end %>
+</div>

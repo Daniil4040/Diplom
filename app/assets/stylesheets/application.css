@@ -26,6 +26,11 @@ body {
 	color: #555;
 }
 
+li {
+	list-style-type:  none;
+}
+
+
 input[type="text"], input[type="password"], input[type="search"] {
   color: #5d5d5d;
   width: 60%;
@@ -278,6 +283,7 @@ td img {
 .send textarea {
   width: 624px;
   height: 200px;
+  padding: 5px;
 }
 
 .send input[type="submit"]{
@@ -357,9 +363,12 @@ td img {
   margin-bottom: 2%;
 }
 
+
 .send input[type="text"]{
   width: 98%;
 }
+
+
 
 .send textarea {
   width: 624px;
@@ -378,8 +387,9 @@ td img {
 }
 
 .send_contact textarea {
-  width: 516px;
+  width: 508px;
 }
+
 
 @media only screen
 and (min-device-width: 320px)
