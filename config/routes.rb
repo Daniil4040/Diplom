@@ -8,6 +8,5 @@ Rails.application.routes.draw do
   get "/rating/", to: "rating#index"
   resources :contacts
   resources :events
-  resources :news
   get "/search/", to: "search#index"
 end
