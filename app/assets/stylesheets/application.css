@@ -148,6 +148,27 @@ ul.menu li a:hover {
 	cursor: pointer;
 }
 
+.bttn {
+	background-color: white;
+	cursor: pointer;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+
+/* .bttn {
+	text-decoration: none;
+	background-color: #7268ad;
+	padding: 5%;
+	color: white;
+	border-radius: 5px;
+	float: left;
+	margin-top: 5%;
+	clear: both;
+	font-size: 0.8em;
+	display: block;
+} */
+
 .sidebar h2 {
 	color: #136cb2;
 }

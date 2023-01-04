@@ -2,9 +2,7 @@
     <h2>Новости</h2>
     <% if event.present? %>
         <span><%= event.date_event %></span>
-        <p><%= event.title %></p>
-        <type="submit"><%= link_to "читать", event, class:"btn"%>
-        <input class="btn" type="submit" value="читать">
+        <p><%= link_to event.title, event %></p>
     <% else %>
         <p>Новостей нет, но скоро появятся</p>
     <% end %>
