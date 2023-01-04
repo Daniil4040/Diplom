@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_12_29_065521) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -52,7 +49,7 @@ ActiveRecord::Schema.define(version: 2022_12_29_065521) do
   create_table "comments", force: :cascade do |t|
     t.text "message"
     t.string "user_name"
-    t.bigint "film_id"
+    t.integer "film_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["film_id"], name: "index_comments_on_film_id"
@@ -81,7 +78,7 @@ ActiveRecord::Schema.define(version: 2022_12_29_065521) do
     t.integer "year"
     t.string "director"
     t.string "description"
-    t.bigint "category_id"
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_films_on_category_id"
