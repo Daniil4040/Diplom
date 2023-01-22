@@ -1,2 +1,20 @@
 class ApplicationController < ActionController::Base
+    private
+    def current_user
+        @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id].present?
+    end
+
+    def user_signed_in?
+        current_user.present?
+    end
+
+    def user_admin?
+        user_admin = false
+        if current_user.present?
+            user_admin = true if current_user.admin
+        end
+    end
+
+    helper_method :current_user, :user_signed_in?
+    helper_method :user_admin?, :user_admin?
 end

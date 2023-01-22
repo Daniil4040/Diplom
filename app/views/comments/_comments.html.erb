@@ -1,10 +1,14 @@
-<% @comments.each do |comment| %>
-    <div class="reviews">
-        <div class="review_name">
-            <%= comment.user_name %>
+<% if @comments.blank? %>
+    Вы можете быть первым, кто оставит отзыв
+<% else %>
+    <% @comments.each do |comment| %>
+        <div class="reviews">
+            <div class="review_name">
+                <%= comment.user_name %>
+            </div>
+            <div class="review_text">
+                <%= comment.message %>
+            </div>
         </div>
-        <div class="review_text">
-            <%= comment.message %>
-        </div>
-    </div>
+    <% end %>
 <% end %>

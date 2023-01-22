@@ -1,0 +1,10 @@
+<%= form_with model: @film do |f| %>
+    <%= f.text_field :name, placeholder: "Имя фильма" %>
+    <%= f.text_field :trailer_link, placeholder: "Ссылка на трейлер" %>
+    <%= f.number_field :rating, placeholder: "Рейтинг" %>
+    <%= f.number_field :year, placeholder: "Год" %>
+    <%= f.text_field :director, placeholder: "Имя директора" %>
+    <%= f.text_field :description, placeholder: "Описание фильма" %>
+    <%= f.number_field :category_id, placeholder: "Id фильма" %>
+    <%= f.submit "Добавить фильм" %>
+<% end %>

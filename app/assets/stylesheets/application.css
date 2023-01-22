@@ -314,6 +314,30 @@ td img {
   border-radius: 5px;
 }
 
+.register input[type="email"]{
+	padding: 10px;
+	margin-bottom: 10px;
+	width: 51ex;
+}
+
+.register input[type="text"]{
+	padding: 10px;
+	margin-bottom: 10px;
+	width: 51ex;
+}
+
+.register input[type="password"]{
+	padding: 10px;
+	margin-bottom: 10px;
+	width: 51ex;
+}
+
+.register input[type="submit"]{
+	padding: 10px;
+	margin-bottom: 13px;
+	width: 40ex;
+}
+
 
 
 .send_contact input[type="text"] {

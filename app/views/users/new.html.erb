@@ -1,0 +1,8 @@
+<div class="register">
+    <%= form_with model: @user do |f| %>
+        <%= f.email_field :email, placeholder: "ваша почта", minlength: "6" %>
+        <%= f.text_field :name, placeholder: "ваша имя", minlength: "4"  %>
+        <%= f.password_field :password, placeholder: "ваш пароль", minlength: "6"  %>
+        <%= f.submit "зарегестрироваться" %>
+    <% end %>
+</div>

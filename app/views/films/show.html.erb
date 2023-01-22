@@ -14,7 +14,16 @@
     <%= @film.description %>
 </div>
 <hr>
+<p>
 <h2>Отзывы об фильме "<%= @film.name %>":</h2>
+</p>
 
 <%= render 'comments/comments' %>
-<%= render 'comments/form' %>
+<% if user_signed_in? %>
+    <%= render 'comments/form' %>
+<% else %>
+    <hr>
+    <p> 
+    Отзыв может оставлять только зарегестрированный пользователь
+    </p>
+<% end %>
