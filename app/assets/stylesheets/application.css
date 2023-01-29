@@ -339,6 +339,12 @@ td img {
 }
 
 
+.creats_film input {
+	padding: 10px;
+	margin-bottom: 13px;
+	width: 50ex;
+}
+
 
 .send_contact input[type="text"] {
   width: 500px;
@@ -422,7 +428,7 @@ td img {
   background-color: #7268AD;
   padding: 3%;
   color: white;
-  border-radius: 5px;
+  border-radius: 5px; 
 }
 
 .send_contact input[type="text"] {

@@ -1,0 +1,13 @@
+<%= semantic_form_for [:admin, @film], builder: ActiveAdmin::FormBuilder do |f| %>
+    <%= f.inputs do %>
+        <%= f.input :name %>
+        <%= f.input :trailer_link%>
+        <%= f.input :rating %>
+        <%= f.input :year %>
+        <%= f.input :director %>
+        <%= f.input :description %>
+        <%= f.input :category_id, as: :select, collection: Category.all %>
+        <%= f.input :poster, as: :file %>
+        <%= f.actions %>
+    <% end %>
+<% end %>
