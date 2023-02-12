@@ -152,3 +152,24 @@ Event.create!(
   title: 'Мы запустили расширенный поиск',
   body: 'Как пользоваться поиском?'
 )
+
+
+1.upto(2000) do
+  film = Film.create!(
+    name: 'Matrix',
+    trailer_link: 'https://www.youtube.com/embed/YihPA42fdQ8',
+    rating: 7.5,
+    year: 2001,
+    director: 'Томас',
+    description: 'иллюзия, существующая только в бесконечном сне обреченного человечества. Холодный мир будущего, в котором люди — всего лишь батарейки в компьютерных системах.',
+    category: category_film
+
+)
+
+film.poster.attach(
+  io: File.open(Rails.root.join("db", "images", "matrix.png")),
+  filename: 'matrix.png',
+  content_type: 'application/png',
+  identify: false
+)
+end

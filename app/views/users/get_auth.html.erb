@@ -1,0 +1,5 @@
+<%= form_with url: '/auth', method: :post do |f| %>
+    <%= f.email_field :email, placeholder: "ваша почта", minlength: "6" %>
+    <%= f.password_field :password, placeholder: "ваш пароль", minlength: "6"  %>
+    <%= f.submit "Авторизоваться" %>
+<% end %>

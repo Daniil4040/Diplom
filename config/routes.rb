@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :events
   resources :users
   get "/search/", to: "search#index"
+  get "/auth/", to:"users#get_auth"
+  post "/auth/", to:"users#set_auth"
 end

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
         @user = User.new 
     end
     
-    def create
+    def create # регистрация
         @user = User.new(user_params)
         puts "***"*20
         puts @user
@@ -18,6 +18,29 @@ class UsersController < ApplicationController
     def index
         session.delete :user_id
         redirect_to root_path
+    end
+
+    def get_auth
+        puts params
+        @user = User.new
+    end
+
+    def set_auth
+        puts "***"*20
+        puts params
+        email = params['email']
+        password = params['password']
+        user = User.find_by(email: email)
+        if user.nil?
+            redirect_to auth_path
+        else
+            if user.authenticate(password)
+                session[:user_id] = user.id
+                redirect_to root_path
+            else
+                redirect_to auth_path
+            end
+        end
     end
 
 

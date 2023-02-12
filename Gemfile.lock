@@ -97,6 +97,8 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.11.0)
+    faker (3.1.1)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
@@ -270,7 +272,9 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   dotenv-rails (~> 2.7)
+  faker
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.3)
   net-smtp
   puma (~> 5.0)
