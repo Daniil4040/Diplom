@@ -144,8 +144,9 @@ ul.menu li a:hover {
 
 .btn {
 	padding: 8px;
-	background-color: white;
+	background-color: blue;
 	cursor: pointer;
+	margin: 3%;
 }
 
 .bttn {
@@ -173,12 +174,22 @@ ul.menu li a:hover {
 	color: #136cb2;
 }
 
-.lables_passreg_text {
-	font-size: 0.7em;
-	margin-top: 3%;
-	margin-left: 2%;
+.lables_passreg_text  input[type="submit"] {
+  background-color: #7268AD;
+  padding: 3%;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none; 
+
 }
 
+.notice {
+	color:#257965;
+}
+
+.danger {
+	color: darkred;
+}
 
 .sidebar .rating_sidebar {
 	float: right;
@@ -335,8 +346,21 @@ td img {
 .register input[type="submit"]{
 	padding: 10px;
 	margin-bottom: 13px;
-	width: 40ex;
+	width: 25ex;
+	background: #7268ad;
 }
+
+.authount input[type="email"] {
+	margin-bottom: 5px;
+}
+
+.authount input[type="submit"]{
+	padding: 10px;
+	margin-top: 1%;
+	width: 20ex;
+	background: #7268ad;
+}
+
 
 
 .creats_film input {

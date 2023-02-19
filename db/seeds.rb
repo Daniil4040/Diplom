@@ -154,7 +154,7 @@ Event.create!(
 )
 
 
-1.upto(2000) do
+1.upto(100) do
   film = Film.create!(
     name: 'Matrix',
     trailer_link: 'https://www.youtube.com/embed/YihPA42fdQ8',

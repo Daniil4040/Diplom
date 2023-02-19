@@ -1,8 +1,11 @@
+<% if flash[:danger] %>
+    <div class="danger"><%= flash[:danger] %></div>
+<% end %>
 <div class="register">
     <%= form_with model: @user do |f| %>
-        <%= f.email_field :email, placeholder: "ваша почта", minlength: "6" %>
-        <%= f.text_field :name, placeholder: "ваша имя", minlength: "4"  %>
-        <%= f.password_field :password, placeholder: "ваш пароль", minlength: "6"  %>
+        <%= f.email_field :email, placeholder: "ваша почта", minlength: "6", :required => true %>
+        <%= f.text_field :name, placeholder: "ваша имя", minlength: "4", :required => true %>
+        <%= f.password_field :password, placeholder: "ваш пароль", minlength: "6", :required => true %>
         <%= f.submit "зарегестрироваться" %>
     <% end %>
 </div>

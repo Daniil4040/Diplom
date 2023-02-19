@@ -4,14 +4,18 @@ class UsersController < ApplicationController
     end
     
     def create # регистрация
-        @user = User.new(user_params)
-        puts "***"*20
-        puts @user
-        if @user.save
-            session[:user_id] = @user.id
-            redirect_to root_path
-        else
+        email = params['user']['email']
+        user = User.find_by(email: email) 
+        if user.present?
+            flash[:danger] = "Такой пользователь уже существует!"
             render :new
+        else
+            @user = User.new(user_params) 
+            if @user.save
+                flash[:notice] = "Поздравляю вы успешно зарегистрировались!"
+                session[:user_id] = @user.id
+                redirect_to root_path
+            end
         end
     end
 
@@ -21,23 +25,23 @@ class UsersController < ApplicationController
     end
 
     def get_auth
-        puts params
         @user = User.new
     end
 
     def set_auth
-        puts "***"*20
-        puts params
         email = params['email']
         password = params['password']
         user = User.find_by(email: email)
         if user.nil?
+            flash[:danger] = "Пользователь не найден!"
             redirect_to auth_path
         else
             if user.authenticate(password)
+                flash[:notice] = "Поздравляю вы успешно авторизовались!"
                 session[:user_id] = user.id
                 redirect_to root_path
             else
+                flash[:danger] = "Пароль не верный!"
                 redirect_to auth_path
             end
         end
