@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get "/search/", to: "search#index"
   get "/auth/", to:"users#get_auth"
   post "/auth/", to:"users#set_auth"
+  get "/code/", to:"users#check_code"
+  get '/patients/:id', to: 'patients#show'
 end

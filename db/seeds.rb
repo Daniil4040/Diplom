@@ -153,8 +153,13 @@ Event.create!(
   body: 'Как пользоваться поиском?'
 )
 
+news = Event.create!(
+  date_event: '12.03.2023',
+  title: 'Мы запустили регистрацию через почту',
+  body: 'Как пользоваться регистрацией?'
+)
 
-1.upto(100) do
+1.upto(0) do
   film = Film.create!(
     name: 'Matrix',
     trailer_link: 'https://www.youtube.com/embed/YihPA42fdQ8',
@@ -172,4 +177,6 @@ film.poster.attach(
   content_type: 'application/png',
   identify: false
 )
+
+
 end

@@ -1,6 +1,9 @@
 <% if flash[:danger] %>
     <div class="danger"><%= flash[:danger] %></div>
 <% end %>
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
 <div class="authount">    
     <%= form_with url: '/auth', method: :post do |f| %>
         <%= f.email_field :email, placeholder: "ваша почта", minlength: "6", :required => true %>

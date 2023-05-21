@@ -60,3 +60,6 @@ gem 'dotenv-rails', '~> 2.7'
 gem 'activeadmin'
 gem 'kaminari'
 gem 'faker'
+gem 'net-pop', require: false
+gem 'net-smtp', require: false
+gem 'net-imap', require: false

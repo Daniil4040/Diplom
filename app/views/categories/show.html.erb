@@ -5,7 +5,7 @@
             <%= image_tag film.poster %>
         <% else %>
         <% end %>
-        <%= film.description %>
+        <%= film.description.truncate(270) %>
         <div class="button"><%= link_to "Смотреть", film %></div>
     </div>
 <% end %>
